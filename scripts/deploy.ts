@@ -28,13 +28,6 @@ export const build = (): void => {
     if (buildResponse.code !== 0) exit(1);
 
     echo("--- Done: Building App ---");
-    echo("--- Exporting App ---");
-
-    const exportResponse = exec("npm run export");
-
-    if (exportResponse.code !== 0) exit(1);
-
-    echo("--- Done: Exporting App ---");
 };
 
 echo("--- Deploying gym-reservations ---");
