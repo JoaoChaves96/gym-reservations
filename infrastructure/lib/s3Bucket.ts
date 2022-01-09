@@ -9,6 +9,7 @@ export class S3Bucket {
             removalPolicy: RemovalPolicy.DESTROY,
             autoDeleteObjects: true,
             websiteIndexDocument: "index.html",
+            websiteErrorDocument: "index.html",
             publicReadAccess: true,
         })
     }
