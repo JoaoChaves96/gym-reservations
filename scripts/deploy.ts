@@ -4,6 +4,7 @@ const deployInfrastructure = (): void => {
     echo("--- Deploying Infrastructure ---");
 
     cd("infrastructure");
+    exec("npx cdk bootstrap aws://923049518139/eu-west-2")
     const response = exec("npx cdk deploy --require-approval never");
     cd("..");
 
