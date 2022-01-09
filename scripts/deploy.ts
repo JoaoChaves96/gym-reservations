@@ -4,7 +4,7 @@ const deployInfrastructure = (): void => {
     echo("--- Deploying Infrastructure ---");
 
     cd("infrastructure");
-    const response = exec("npx cdk deploy");
+    const response = exec("npx cdk deploy --require-approval never");
     cd("..");
 
     if (response.code !== 0) exit(1);
