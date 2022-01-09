@@ -14,7 +14,7 @@ const deployInfrastructure = (): void => {
 
 export const syncToS3 = (): void => {
     echo(`--- Syncing To S3 ---`);
-    exec(`aws s3 sync out s3://gym-reservations.com --delete`);
+    exec(`aws s3 sync build s3://gym-reservations.com --delete`);
     echo(`--- Done: Syncing To S3 ---`);
 };
 
